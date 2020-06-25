@@ -1,10 +1,7 @@
 #!/usr/bin/python2
 #coding=utf-8
-##### 
-######  -*- coding: utf-8 -*-##### 
 
-import time,sys,random,cookielib,mechanize,os
-
+import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,requests,mechanize,fileinput
 reload(sys)
 sys.setdefaultencoding('utf8')
 
@@ -20,7 +17,8 @@ def auto(a):
 		sys.stdout.flush()
 		time.sleep(0.009)
     
-logo = """\033[38;5;214m●▬▬▬▬▬▬▬▬๑\033[1;97m●▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬●\033[1;32m●▬▬▬▬▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬●
+logo = """
+\033[38;5;214m●▬▬▬▬▬▬▬▬๑\033[1;97m●▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬●\033[1;32m●▬▬▬▬▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬●
 \033[38;5;214m● ____ _  _ ____ __\033[1;97m__ ____ ____    _  _ \033[1;32m___ _ _    ____  ● 
 \033[38;5;214m● |    |__| |__| |_\033[1;97m_/ | __ |___    |  | \033[1;32m |  | |    |___  ● 
 \033[38;5;214m● |___ |  | |  | | \033[1;97m \ |__] |___    |__| \033[1;32m |  | |___ |___  ● 
@@ -35,7 +33,7 @@ except ModuleNotFoundError:
 	
 os.system("clear")
 auto(logo)
-raw_input("\n\033[1;91m[\033[1;97mTaper entrer por Suivant\033[1;91m] ")
+raw_input("\n\033[1;91m[\033[1;97mTaper entrer\033[1;91m]")
 time.sleep(3)
 os.system("clear")
 print ("""\033[38;5;214m●▬▬▬▬▬▬▬▬๑\033[1;97m●▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬●●▬▬▬▬▬\033[1;32m▬▬▬▬๑۩۩๑▬▬▬▬▬▬●             
