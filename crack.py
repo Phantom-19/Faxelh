@@ -175,7 +175,7 @@ def Kouadio():
          Street("\033[1;92m | |_) | |  | |_| | || (_| | |\033[1;91m      | |    | |_) |")
          Street("\033[1;92m |____/|_|   \__,_|\__\__,_|_|\033[1;91m      |_|    |_.__/ ")         
 	 print("")
-	 Street("\x1b[31m[\x1b[37m*\x1b[31m] \033[37mCodé par\033[1;91m : \x1b[36m\033[041m Hacker_K\033[00m  \x1b[31m [\033[1;97m*\x1b[31m] ")
+	 Street("\x1b[31m[\x1b[37m*\x1b[31m] \033[37mCodé par\033[1;91m : \x1b[36m\033[041m Faxel\033[00m  \x1b[31m [\033[1;97m*\x1b[31m] ")
          print("")
          print("")
          hacker = open(motdepasse, 'r')
