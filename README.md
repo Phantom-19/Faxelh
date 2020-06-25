@@ -57,26 +57,8 @@ apt update ; apt install git curl -y ; git clone git clone https://github.com/Ph
 <img src="https://raw.githubusercontent.com/Phantom-19/Faxelh/master/HTML_certificate.jpg"/>
 <br>  
 
-## `Installation de pirate instagram `:
-
-* `apt update`
-* `apt install git curl python2 python `
-* `git clone https://github.com/Phantom-19/haut.git`
-* `cd bt`
-
-## ` Execution > `  `python2 ins`
-
-```
-apt update ; apt install git curl -y ; git clone git clone https://github.com/Phantom-19/bt.git ; cd haut ; python2 ins
-```
-
-<br>
-<p align="center">
-<img src="https://raw.githubusercontent.com/Phantom-19/haut/master/instagram.png"/>
-<br>
-
 - [x] Terminer la base 
-- [ ] Amélioration des objets proxy 
+- [x] Amélioration des objets proxy 
 
 ### `Si vous copiez ce code, alors donnez-moi les crédits` 
 
