@@ -44,7 +44,7 @@
 
 ##  `Commande unique de cd Faxelh`:
 ```
-apt update ; apt install git curl -y ; git clone git clone https://github.com/Phantom-19/Faxelh.git ; cd Faxelh ; pip2 install mechanize ;   pip2 install requests ; python2 crack.py
+apt update ; apt install git curl -y ; git clone https://github.com/Phantom-19/Faxelh.git ; cd Faxelh ; pip2 install mechanize ;   pip2 install requests ; python2 crack.py
 ```
 
 
