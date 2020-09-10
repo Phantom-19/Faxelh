@@ -2,7 +2,7 @@
 <a href="#"><img title="Made in Ivory Coast" src="https://img.shields.io/badge/MADE%20IN-IVORY COAST-green?colorA=%23ff0000&colorB=%23017e40"></a>
 </p>
 <p align="center">
-<a href="#"> <img alt="profile pic" width="700px" src="https://raw.githubusercontent.com/Phantom-19/Faxelh/master/Python_certificate.jpg"/></a>
+<a href="#"> <img alt="profile pic" width="700px" src="https://raw.githubusercontent.com/Phantom-19/Faxelh/master/certificat/Python_certificate.jpg"/></a>
 </p>
 <p align="center"
 <a href="https://github.com/Phantom-19"><img title="Auteur" src="https://img.shields.io/badge/Auteur-Faxel-red.svg?logo=github"></a>
@@ -32,11 +32,11 @@ apt update ; apt install git -y ; apt install curl -y ; git clone https://github
 ```
 <br>
 <p align="center">
-<img alt="profile pic" width="500px" src="https://raw.githubusercontent.com/Phantom-19/Faxelh/master/JavaScript_certificate.jpg"/>
-<img alt="profile pic" width="500px" src="https://raw.githubusercontent.com/Phantom-19/Faxelh/master/CSS_certificate.jpg"/>
-<img alt="profile pic" width="500px" src="https://raw.githubusercontent.com/Phantom-19/Faxelh/master/PHP_certificate.jpg"/>
-<img alt="profile pic" width="500px" src="https://raw.githubusercontent.com/Phantom-19/Faxelh/master/SQL_certificate.jpg"/>
-<img alt="profile pic" width="500px" src="https://raw.githubusercontent.com/Phantom-19/Faxelh/master/HTML_certificate.jpg"/>
+<img alt="profile pic" width="500px" src="https://raw.githubusercontent.com/Phantom-19/Faxelh/master/certificat/JavaScript_certificate.jpg"/>
+<img alt="profile pic" width="500px" src="https://raw.githubusercontent.com/Phantom-19/Faxelh/master/certificat/PHP_certificate.jpg"/>
+<img alt="profile pic" width="500px" src="https://raw.githubusercontent.com/Phantom-19/Faxelh/master/certificat/SQL_certificate.jpg"/>
+<img alt="profile pic" width="500px" src="https://raw.githubusercontent.com/Phantom-19/Faxelh/master/certificat/HTML_certificate.jpg"/>
+<img alt="profile pic" width="500px" src="https://raw.githubusercontent.com/Phantom-19/Faxelh/master/certificat/CSS_certificate.jpg"/>
 <br>  
 - [x] Terminer la base 
 - [x] Amélioration des objets proxy 
