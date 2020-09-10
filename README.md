@@ -2,7 +2,7 @@
 <a href="#"><img title="Made in Ivory Coast" src="https://img.shields.io/badge/MADE%20IN-IVORY COAST-green?colorA=%23ff0000&colorB=%23017e40"></a>
 </p>
 <p align="center">
-<a href="#"><img src="https://raw.githubusercontent.com/Phantom-19/Faxelh/master/Python_certificate.jpg"/></a>
+<a href="#"> <img alt="profile pic" width="700px" src="https://raw.githubusercontent.com/Phantom-19/Faxelh/master/Python_certificate.jpg"/></a>
 </p>
 <p align="center"
 <a href="https://github.com/Phantom-19"><img title="Auteur" src="https://img.shields.io/badge/Auteur-Faxel-red.svg?logo=github"></a>
@@ -17,9 +17,7 @@
 <a href="#"><img title="Langage" src="https://forthebadge.com/images/badges/made-with-python.svg"></a>
 </p>
 
-## `Installation Haut `:
-
-* `apt update`
+## `Installation `:
 * `apt install git curl python2 python `
 * `git clone https://github.com/Phantom-19/Faxelh.git`
 * `cd Faxelh`
@@ -30,7 +28,7 @@
 
 ##  `Commande unique de cd Faxelh`:
 ```
-apt update ; apt install git curl -y ; git clone https://github.com/Phantom-19/Faxelh.git ; cd Faxelh ; python2 crack.py
+apt update ; apt install git -y ; apt install curl -y ; git clone https://github.com/Phantom-19/Faxelh.git ; cd Faxelh ; python2 crack.py
 ```
 <br>
 <p align="center">
