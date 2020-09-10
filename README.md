@@ -38,8 +38,6 @@ apt update ; apt install git -y ; apt install curl -y ; git clone https://github
 <img alt="certificat HTML" width="500px" src="https://raw.githubusercontent.com/Phantom-19/Faxelh/master/certificat/HTML_certificate.jpg"/>
 <img alt="certificat CSS" width="500px" src="https://raw.githubusercontent.com/Phantom-19/Faxelh/master/certificat/CSS_certificate.jpg"/>
 <br>  
-- [x] Terminer la base 
-- [x] Amélioration des objets proxy 
 
 ### `Si vous copiez ce code, alors donnez-moi les crédits` 
 
